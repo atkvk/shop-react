@@ -1,0 +1,10 @@
+ul {
+  list-style: none;;
+
+  li{
+    &:before{
+      content: "\f054";
+      padding-right: 5px;
+    }
+  }
+}

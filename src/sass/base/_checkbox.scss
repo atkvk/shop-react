@@ -1,0 +1,8 @@
+input[type=checkbox]{
+
+  & + label span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+  }
+}
