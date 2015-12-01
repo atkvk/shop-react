@@ -1,10 +1,16 @@
-ul {
-  list-style: none;;
+.steps {
 
-  li{
-    &:before{
-      content: "\f054";
-      padding-right: 5px;
+  ul {
+    height: 40px;
+    background-color: #0b97c4;
+    padding: 20px;
+
+    li {
+      margin: 20px;
+      list-style: none;
+      display: inline;
     }
   }
 }
+
+

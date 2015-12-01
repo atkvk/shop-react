@@ -1,20 +1,20 @@
 "use strict";
 var React = require('react');
-
-var HelloWorld = React.createClass({
-    render: function () {
-        return (
-            <div>Hello world</div>
-        );
-    }
-});
+var Steps = require('./Steps.jsx');
+var StepContent = require('./StepContent.jsx');
 
 var App = React.createClass({
+    getInitialState: function () {
+        return {
+            currentStep: 3
+        }
+    },
     render: function () {
         return (
             <div>
                 <h1>Shopping cart</h1>
-                <p><HelloWorld /></p>
+                <div><Steps /></div>
+                <div><StepContent step={this.state.currentStep}/></div>
             </div>
         );
     }
