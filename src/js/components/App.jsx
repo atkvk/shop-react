@@ -6,7 +6,7 @@ var StepContent = require('./StepContent.jsx');
 var App = React.createClass({
     getInitialState: function () {
         return {
-            currentStep: 3
+            currentStep: 1
         }
     },
     render: function () {

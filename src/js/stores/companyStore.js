@@ -31,7 +31,6 @@ Dispatcher.register(function(action){
             break;
         case ActionTypes.REMOVE_COMPANY:
             ShopStore.emitChange();
-
     }
 });
 

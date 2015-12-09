@@ -13,9 +13,8 @@ gulp.task('default', ['copy', 'styles', 'scripts', 'watch', 'browser-sync']);
 gulp.task('production', ['copy', 'styles', 'scripts']);
 
 gulp.task('scripts', function () {
-
     return browserify(['./src/js/main.js'])
-        .transform(reactify)
+        .transform([reactify])
         .bundle()
         .pipe(source('main.js'))
         .pipe(gulp.dest('./dist/js/'));
@@ -59,10 +58,10 @@ gulp.task('watch', function () {
     gulp.watch(['./src/js/**/*.js*'], ['scripts']).on('change', browserSync.reload);
 });
 
-gulp.task('browser-sync', function(){
+gulp.task('browser-sync', function () {
     // Serve file from the root of this project
     browserSync.init({
-        server:{
+        server: {
             baseDir: './dist',
             browser: ['google chrome', 'firefox'],
             notify: true
@@ -70,12 +69,12 @@ gulp.task('browser-sync', function(){
     });
 });
 
-gulp.task('nodemon', function(next){
+gulp.task('nodemon', function (next) {
     var started = false;
 
     return nodemon({script: 'x'})
-        .on('start', function(){
-            if(!started){
+        .on('start', function () {
+            if (!started) {
                 next();
                 started = true;
             }
