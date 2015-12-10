@@ -1,9 +1,9 @@
 "use strict";
 
 var React = require('react');
-var SelectCompany = require('./step-1-select-company/SelectCompany.jsx');
-var SelectProduct = require('./step-2-select-product/SelectProduct.jsx');
-var Checkout = require('./step-3-checkout/CheckOut.jsx');
+var SelectCompany = require('../step-1-select-company/SelectCompany.jsx');
+var SelectProduct = require('../step-2-select-product/SelectProduct.jsx');
+var Checkout = require('../step-3-checkout/CheckOut.jsx');
 
 var StepContent = React.createClass({
     getCurrentStepContent: function () {

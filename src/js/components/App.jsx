@@ -1,12 +1,20 @@
 "use strict";
 var React = require('react');
-var Steps = require('./Steps.jsx');
-var StepContent = require('./StepContent.jsx');
+var Steps = require('./common/Steps.jsx');
+var StepContent = require('./common/StepContent.jsx');
+var OrderDetails = require('./common/OrderDetails.jsx');
 
 var App = React.createClass({
     getInitialState: function () {
         return {
-            currentStep: 1
+            order: {
+                company: {
+                    kvknummer: 134234324,
+                    name: 'Hema'
+                },
+                product: {},
+                currentStep: 1
+            }
         }
     },
     render: function () {
@@ -14,7 +22,8 @@ var App = React.createClass({
             <div>
                 <h1>Shopping cart</h1>
                 <div><Steps /></div>
-                <div><StepContent step={this.state.currentStep}/></div>
+                <div><OrderDetails order={this.state.order}/></div>
+                <div><StepContent step={this.state.order.currentStep}/></div>
             </div>
         );
     }
