@@ -1,16 +1,7 @@
-class Product {
-
-    private _id;
-
-    constructor() {
-
+var Product = (function () {
+    function Product() {
     }
+    return Product;
+})();
 
-    get() {
-        return this._id;
-    }
-
-    set(value) {
-        this._id = value;
-    }
-}
+module.exports = Product;
