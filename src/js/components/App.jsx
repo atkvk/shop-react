@@ -3,6 +3,7 @@ var React = require('react');
 var Steps = require('./common/Steps.jsx');
 var StepContent = require('./common/StepContent.jsx');
 var OrderDetails = require('./common/OrderDetails.jsx');
+var orderStore = require('../stores/orderStores');
 
 var App = React.createClass({
     getInitialState: function () {
@@ -17,6 +18,12 @@ var App = React.createClass({
             }
         }
     },
+    componentDidMount: function () {
+        orderStore.addChangeListener(this._onChange);
+    },
+    componentWillUnmount: function () {
+        orderStore.removeChangeListener(this._onChange);
+    },
     render: function () {
         return (
             <div>
@@ -26,6 +33,12 @@ var App = React.createClass({
                 <div><StepContent step={this.state.order.currentStep}/></div>
             </div>
         );
+    },
+    _onChange: function () {
+        console.log('call back of orderAction.selectCompany triggered');
+        this.setState({
+            order: orderStore.getOrder()
+        });
     }
 });
 

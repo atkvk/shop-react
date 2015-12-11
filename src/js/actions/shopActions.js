@@ -3,6 +3,7 @@ var constants = require('../constants/actionTypes');
 
 var ShopActions = {
     selectCompany: function (kvknummer) {
+        console.log('shopaction.selectcompany:', kvknummer);
         Dispatcher.dispatch({
             actionType: constants.SELECT_COMPANY,
             kvknummer: kvknummer

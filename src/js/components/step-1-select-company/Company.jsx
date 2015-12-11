@@ -1,4 +1,5 @@
 var React = require('react');
+var shopActions = require('../../actions/shopActions');
 
 var Companies = React.createClass({
     getDefaultProps: function () {
@@ -11,6 +12,8 @@ var Companies = React.createClass({
     },
     selectCompany: function(){
         console.log('select company clicked');
+
+        shopActions.selectCompany("123213213");
     },
     render: function () {
         return (
