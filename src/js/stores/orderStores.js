@@ -21,6 +21,7 @@ function selectCompany(kvknummer) {
 
 function removeCompany() {
     order.company = null;
+    order.product = null;
     order.currentStep = 1;
 }
 
@@ -59,9 +60,18 @@ Dispatcher.register(function (action) {
             selectCompany(action.kvknummer);
             OrderStore.emitChange();
             break;
+        case actionTypes.REMOVE_COMPANY:
+            removeCompany();
+            OrderStore.emitChange();
+            break;
         case actionTypes.SELECT_PRODUCT:
             selectProduct(action.productId)
             OrderStore.emitChange();
+            break;
+        case actionTypes.REMOVE_PRODUCT:
+            removeProduct();
+            OrderStore.emitChange();
+            break;
     }
 });
 

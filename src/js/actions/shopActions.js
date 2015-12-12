@@ -7,19 +7,24 @@ var ShopActions = {
         Dispatcher.dispatch({
             actionType: constants.SELECT_COMPANY,
             kvknummer: kvknummer
-        })
+        });
     },
-    removeCompany: function (kvknummer) {
+    removeCompany: function () {
+        console.log('shopaction.removeCompany');
         Dispatcher.dispatch({
-            actionType: constants.REMOVE_COMPANY,
-            kvknummer: kvknummer
-        })
+            actionType: constants.REMOVE_COMPANY
+        });
     },
     selectProduct: function (productId) {
         Dispatcher.dispatch({
             actionType: constants.SELECT_PRODUCT,
             productId: productId
-        })
+        });
+    },
+    removeProduct: function(){
+        Dispatcher.dispatch({
+            actionType: constants.REMOVE_PRODUCT
+        });
     }
 };
 
