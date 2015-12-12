@@ -2,7 +2,7 @@
 
   ul {
     height: 40px;
-    background-color: #0b97c4;
+    background-color: #CFCFCF;
     padding: 20px;
 
     li {
@@ -10,6 +10,10 @@
       list-style: none;
       display: inline;
     }
+  }
+
+  .is-active {
+    background-color: red;
   }
 }
 

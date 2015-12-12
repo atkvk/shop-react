@@ -9,11 +9,8 @@ var App = React.createClass({
     getInitialState: function () {
         return {
             order: {
-                company: {
-                    kvknummer: 134234324,
-                    name: 'Hema'
-                },
-                product: {},
+                company: null,
+                product: null,
                 currentStep: 1
             }
         }
@@ -26,11 +23,13 @@ var App = React.createClass({
     },
     render: function () {
         return (
-            <div>
+            <div className="container">
                 <h1>Shopping cart</h1>
-                <div><Steps /></div>
-                <div><OrderDetails order={this.state.order}/></div>
-                <div><StepContent step={this.state.order.currentStep}/></div>
+                <div>
+                    <div><Steps order={this.state.order}/></div>
+                    <div><OrderDetails order={this.state.order}/></div>
+                    <div><StepContent order={this.state.order}/></div>
+                </div>
             </div>
         );
     },

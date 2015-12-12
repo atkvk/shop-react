@@ -7,13 +7,13 @@ var Checkout = require('../step-3-checkout/CheckOut.jsx');
 
 var StepContent = React.createClass({
     getCurrentStepContent: function () {
-        switch (this.props.step) {
+        switch (this.props.order.currentStep) {
             case 1:
                 return <SelectCompany />;
             case 2:
-                return <SelectProduct />;
+                return <SelectProduct order={this.props.order}/>;
             case 3:
-                return <Checkout />;
+                return <Checkout order={this.props.order}/>;
             default:
                 return <SelectCompany />;
         }

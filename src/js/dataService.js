@@ -13,8 +13,13 @@ var dataService = (function () {
         //return JSON.parse(fs.readFile('../data/companies.json', 'utf8'));
     }
 
+    function getProducts(kvknummer){
+        return require('../data/products.json');
+    }
+
     return {
-        searchCompanies: getCompanies
+        searchCompanies: getCompanies,
+        getProducts: getProducts
     }
 })();
 

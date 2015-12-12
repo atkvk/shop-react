@@ -5,6 +5,7 @@ var assign = require('object-assign');
 var _ = require('lodash');
 
 var Company = require('../models/Company');
+var Product = require('../models/Product');
 
 var CHANGE_EVENT = 'change';
 
@@ -15,6 +16,25 @@ function selectCompany(kvknummer) {
     company.kvknummer = kvknummer;
 
     order.company = company;
+    order.currentStep = 2;
+}
+
+function removeCompany() {
+    order.company = null;
+    order.currentStep = 1;
+}
+
+function selectProduct(productId) {
+    var product = new Product();
+    product.productId = productId;
+    product.name = 'Bedrijfsprofile';
+
+    order.product = product;
+    order.currentStep = 3;
+}
+
+function removeProduct() {
+    order.product = null;
     order.currentStep = 2;
 }
 
@@ -39,6 +59,9 @@ Dispatcher.register(function (action) {
             selectCompany(action.kvknummer);
             OrderStore.emitChange();
             break;
+        case actionTypes.SELECT_PRODUCT:
+            selectProduct(action.productId)
+            OrderStore.emitChange();
     }
 });
 

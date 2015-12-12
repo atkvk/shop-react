@@ -5,7 +5,7 @@ var React = require('react');
 var Company = React.createClass({
     render: function () {
         return (
-            <div>
+            <div className="row info-panel">
                 <div>
                     Kvknummer: <span>{this.props.company.kvknummer}</span>
                 </div>

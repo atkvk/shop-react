@@ -14,6 +14,12 @@ var ShopActions = {
             actionType: constants.REMOVE_COMPANY,
             kvknummer: kvknummer
         })
+    },
+    selectProduct: function (productId) {
+        Dispatcher.dispatch({
+            actionType: constants.SELECT_PRODUCT,
+            productId: productId
+        })
     }
 };
 
