@@ -1,12 +1,12 @@
 .steps {
   display: flex;
-  background-color: yellow;
+  background-color: #CFCFCF;
 
   div {
-    height: 50px;
+    min-height: 50px;
     flex-grow: 1;
 
-    background-color: gray;
+    background-color: #CFCFCF;
     margin: 0 5px;
 
   }

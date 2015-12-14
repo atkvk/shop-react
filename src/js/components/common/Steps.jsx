@@ -11,12 +11,10 @@ var Steps = React.createClass({
         var step3class = classset({'is-active': this.props.order.currentStep === 3});
 
         return (
-            <div className="steps">
-                <ul>
-                    <li className={step1class}><span>1.</span> Bedrijf zoeken</li>
-                    <li className={step2class}><span>2.</span> Product kiezen</li>
-                    <li className={step3class}><span>3.</span> Bestelling afronden</li>
-                </ul>
+            <div className="row steps">
+                <div className={step1class}><span>1.</span> Bedrijf zoeken</div>
+                <div className={step2class}><span>2.</span> Product kiezen</div>
+                <div className={step3class}><span>3.</span> Bestelling afronden</div>
             </div>
         );
     }

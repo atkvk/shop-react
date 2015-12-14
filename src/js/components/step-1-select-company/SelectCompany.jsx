@@ -27,7 +27,7 @@ var SelectCompany = React.createClass({
     },
     render: function () {
         var companies = this.state.companies.map(function (company) {
-            return <Company key={company.kvknummer} company={company}/>
+            return <Company key={company.dossiernummer} company={company}/>
         });
         return (
             <div>

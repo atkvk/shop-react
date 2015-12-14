@@ -26,9 +26,9 @@ var App = React.createClass({
             <div className="container">
                 <h1>Shopping cart</h1>
                 <div>
-                    <div><Steps order={this.state.order}/></div>
-                    <div><OrderDetails order={this.state.order}/></div>
-                    <div><StepContent order={this.state.order}/></div>
+                    <Steps order={this.state.order}/>
+                    <OrderDetails order={this.state.order}/>
+                    <StepContent order={this.state.order}/>
                 </div>
             </div>
         );

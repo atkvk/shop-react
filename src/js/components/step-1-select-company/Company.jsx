@@ -5,21 +5,21 @@ var Companies = React.createClass({
     getDefaultProps: function () {
         return {
             company: {
-                kvknummer: '12323',
-                name: 'a default company'
+                dossiernummer: '12323',
+                handelsnaam: 'a default company'
             }
         }
     },
     selectCompany: function(){
         console.log('select company clicked');
 
-        shopActions.selectCompany("123213213");
+        shopActions.selectCompany(this.props.company.dossiernummer);
     },
     render: function () {
         return (
             <li onClick={this.selectCompany}>
-                <span>{this.props.company.kvknummer}</span>
-                <span>{this.props.company.name}</span>
+                <span>{this.props.company.dossiernummer}</span>
+                <span>{this.props.company.handelsnaam}</span>
             </li>
         );
     }

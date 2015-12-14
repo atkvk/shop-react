@@ -12,10 +12,10 @@ var Company = React.createClass({
         return (
             <div className="row info-panel">
                 <div>
-                    Kvknummer: <span>{this.props.company.kvknummer}</span>
+                    Kvknummer: <span>{this.props.company.dossiernummer}</span>
                 </div>
                 <div>
-                    Name: <span>{this.props.company.name}</span>
+                    Name: <span>{this.props.company.handelsnaam}</span>
                 </div>
                 <div>
                     <button onClick={this.removeCompany}>Remove</button>

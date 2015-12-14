@@ -7,15 +7,14 @@ var _ = require('lodash');
 var Company = require('../models/Company');
 var Product = require('../models/Product');
 
+var dataService = require('../dataService');
+
 var CHANGE_EVENT = 'change';
 
 var order = {};
 
 function selectCompany(kvknummer) {
-    var company = new Company();
-    company.kvknummer = kvknummer;
-
-    order.company = company;
+    order.company = dataService.getCompany(kvknummer);
     order.currentStep = 2;
 }
 
