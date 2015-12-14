@@ -18,7 +18,7 @@ var SelectProduct = React.createClass({
     },
     render: function () {
         var products = this.state.products.map(function (product) {
-            return <Product key={product.id} product={product}/>
+            return <Product key={product.productnaam} product={product}/>
         });
         return (
             <div>

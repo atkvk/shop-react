@@ -1,19 +1,19 @@
 "use strict";
 
 var React = require('react');
-var ReactDOM = require('react-dom');
 var shopActions = require('../../actions/shopActions');
 
 var Product = React.createClass({
     selectProduct: function () {
         console.log('select product: click on product list');
-        var productId = ReactDOM.findDOMNode(this.refs.productId).value;
-        shopActions.selectProduct(productId);
+        console.log(this.props.product.productnaam);
+
+        shopActions.selectProduct(this.props.product.productnaam);
     },
     render: function () {
         return (
-            <li ref="productId" onClick={this.selectProduct}>
-                <span>Name: </span><span>{this.props.product.name}</span>
+            <li onClick={this.selectProduct}>
+                <span>{this.props.product.productnaam}</span>
             </li>
         );
     }

@@ -25,11 +25,7 @@ function removeCompany() {
 }
 
 function selectProduct(productId) {
-    var product = new Product();
-    product.productId = productId;
-    product.name = 'Bedrijfsprofile';
-
-    order.product = product;
+    order.product = dataService.getProduct(productId);
     order.currentStep = 3;
 }
 

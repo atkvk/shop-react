@@ -24,10 +24,20 @@ var dataService = (function () {
         return require('../data/products.json');
     }
 
+    function getProduct(productnaam){
+        console.log('productnaam', productnaam);
+        var products = _.where(getProducts(), {productnaam: productnaam});
+
+        console.log(products);
+
+        return _.first(products);
+    }
+
     return {
         searchCompanies: getCompanies,
         getCompany: getCompany,
-        getProducts: getProducts
+        getProducts: getProducts,
+        getProduct: getProduct
     }
 })();
 

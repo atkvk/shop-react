@@ -12,7 +12,7 @@ var Product = React.createClass({
             <div className="row info-panel">
                 <div className="col-md-12">
                     <div className="well-lg">
-                        <div>Product: {this.props.product.name}</div>
+                        <div><h3>{this.props.product.productnaam}</h3></div>
                         <div>
                             <button onClick={this.removeProduct}>Remove</button>
                         </div>

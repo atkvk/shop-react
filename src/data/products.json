@@ -1,10 +1,72 @@
 [
   {
-    "id": "1",
-    "name": "Bedrijfsprofiel"
+    "prijs": "6,32",
+    "productnaam": "Bedrijfsprofiel",
+    "productstatus": "inactiefB",
+    "systeemmelding": "82 De gegevens betreffende dit dossier zijn tijdelijk niet beschikbaar.",
+    "productomschrijving": "Uittreksel + concernrelaties + deponeringen + historie."
   },
   {
-    "id": "2",
-    "name": "Uitreksel"
+    "producturl": "/TST-BIN/FU/TSWS002@?BUTT=342679810000",
+    "productnaam": "Uittreksel",
+    "productstatus": "actief",
+    "prijs": "Vanaf 2,61",
+    "varianten": [
+      {
+        "productnaam": "Inzien uittreksel",
+        "productstatus": "inactiefB",
+        "systeemmelding": "02 Het uittreksel is momenteel in behandeling bij de kamer van koophandel. U kunt het uittreksel niet inzien of als e-mail laten toezenden.",
+        "prijs": " 2,61"
+      },
+      {
+        "productnaam": "Digitaal gewaarmerkt uittreksel",
+        "productstatus": "inactiefB",
+        "prijs": " 7,50"
+      },
+      {
+        "producturl": "/TST-BIN/FU/BUWS006@?BUTT=342679810000",
+        "productnaam": "Papieren gewaarmerkt uittreksel",
+        "productstatus": "actief",
+        "prijs": " 11,01"
+      }
+    ]
+  },
+  {
+    "producturl": "/TST-BIN/FU/JRWS001@?BUTT=342679810000",
+    "productnaam": "Jaarrekeningen",
+    "productstatus": "actief",
+    "prijs": "Vanaf 2,81"
+  },
+  {
+    "producturl": "/TST-BIN/FU/MDWS001@?BUTT=H342679810000",
+    "productnaam": "Concernrelaties",
+    "productstatus": "actief",
+    "datumconcernrelaties": "12-1-2014",
+    "prijs": "3,71"
+  },
+  {
+    "producturl": "/TST-BIN/FU/OIWWW01@?BUTT=ALLE++++342679810000&CHK1=J",
+    "productnaam": "Documenten",
+    "productstatus": "actief",
+    "productomschrijving": "Overige documenten over deze onderneming zoals statuten en fusie- en splitsingsvoorstellen.",
+    "prijs": "Vanaf 2,91"
+  },
+  {
+    "productnaam": "Historie",
+    "productstatus": "inactiefB",
+    "systeemmelding": "54 Het uittreksel is momenteel in behandeling bij de kamer van koophandel. De historische informatie betreffende dit dossier is niet beschikbaar.",
+    "prijs": "1,01"
+  },
+  {
+    "productnaam": "Deponeringen",
+    "productstatus": "inactiefB",
+    "systeemmelding": "64 Het uittreksel is momenteel in behandeling bij de kamer van koophandel. De deponerings informatie betreffende dit dossier is niet beschikbaar.",
+    "prijs": "2,51"
+  },
+  {
+    "productnaam": "In het kort",
+    "productstatus": "inactiefB",
+    "systeemmelding": "34 Het uittreksel is momenteel in behandeling bij de kamer van koophandel. De verkorte informatie (&quot;In het kort&quot;) betreffende dit dossier is niet beschikbaar.",
+    "prijs": "0,31"
   }
 ]
