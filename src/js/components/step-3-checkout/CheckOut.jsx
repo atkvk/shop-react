@@ -5,7 +5,11 @@ var React = require('react');
 var Checkout = React.createClass({
     render: function () {
         return (
-            <div>Checkout</div>
+            <div>
+                <h2>Checkout</h2>
+                <p>You are going to checkout</p>
+                <button disabled>Put your order</button>
+            </div>
         );
     }
 });
