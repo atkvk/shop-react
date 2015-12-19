@@ -4,10 +4,11 @@ var EventEmitter = require('events').EventEmitter;
 var assign = require('object-assign');
 var _ = require('lodash');
 var CHANGE_EVENT = 'change';
+var actionTypes = require('../constants/actionTypes');
 
-var companies = [];
+var payment;
 
-var ShopStore = assign({}, EventEmitter.prototype, {
+var PaymentStore = assign({}, EventEmitter.prototype, {
     addChangeListener: function (callback) {
         this.on(CHANGE_EVENT, callback);
     },
@@ -17,21 +18,19 @@ var ShopStore = assign({}, EventEmitter.prototype, {
     emitChange: function () {
         this.emit(CHANGE_EVENT);
     },
-    getCompanies: function () {
-        return [{
-            id: 1, name: 'KPN'
-        }]
+    getSelectedPayment: function () {
+        console.log('paymentStore.getSelectedPayment: ', payment);
+        return payment;
     }
 });
 
 Dispatcher.register(function(action){
-    switch (action.actionType){
-        case ActionTypes.SELECT_COMPANY:
-            ShopStore.emitChange();
+    switch (action.actionType) {
+        case actionTypes.SELECT_PAYMENT:
+            payment = action.payment;
+            PaymentStore.emitChange();
             break;
-        case ActionTypes.REMOVE_COMPANY:
-            ShopStore.emitChange();
     }
 });
 
-module.exports = ShopStore;
+module.exports = PaymentStore;

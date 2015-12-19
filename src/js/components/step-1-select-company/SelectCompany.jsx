@@ -11,10 +11,15 @@ var SelectCompany = React.createClass({
     getInitialState: function () {
         return {
             searchText: 'xx',
+            extendedSearch: {
+                kvknummer: '',
+                street: '',
+                postcode: ''
+            },
             companies: []
         }
     },
-    changeSearchText: function(){
+    changeSearchText: function () {
         var state = this.state;
         state.searchText = ReactDOM.findDOMNode(this.refs.searchText).value;
         this.setState(state);

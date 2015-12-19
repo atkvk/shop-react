@@ -21,9 +21,16 @@ var ShopActions = {
             productId: productId
         });
     },
-    removeProduct: function(){
+    removeProduct: function () {
         Dispatcher.dispatch({
             actionType: constants.REMOVE_PRODUCT
+        });
+    },
+    selectPayment: function (payment) {
+        console.log('Action Creater: shopAction.selectPayment');
+        Dispatcher.dispatch({
+            actionType: constants.SELECT_PAYMENT,
+            payment: payment
         });
     }
 };
