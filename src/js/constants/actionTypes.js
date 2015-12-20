@@ -8,6 +8,9 @@ module.exports = keyMirror(
         SELECT_PRODUCT: null,
         REMOVE_PRODUCT: null,
 
+        SWITCH_SEARCH_MODE: null,
+        SEARCH: null,
+
         SELECT_PAYMENT: null
     }
 );
