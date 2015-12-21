@@ -5,6 +5,7 @@ var dataService = require('../../dataService');
 
 var React = require('react');
 var ReactDOM = require('react-dom');
+var SearchPanel = require('./searchPanel/SearchPanel.jsx');
 var Company = require('./Company.jsx');
 
 var SelectCompany = React.createClass({
@@ -38,6 +39,7 @@ var SelectCompany = React.createClass({
             <div>
                 <h3>Select company</h3>
                 <p>You are searching text: <span>{this.state.searchText}</span></p>
+                <SearchPanel />
                 <div>
                     <input type="text"
                            ref="searchText"

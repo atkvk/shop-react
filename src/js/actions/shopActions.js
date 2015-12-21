@@ -32,6 +32,12 @@ var ShopActions = {
             actionType: constants.SELECT_PAYMENT,
             payment: payment
         });
+    },
+    switchSearchMode: function(mode){
+        Dispatcher.dispatch({
+            actionType: constants.SWITCH_SEARCH_MODE,
+            mode: mode
+        })
     }
 };
 

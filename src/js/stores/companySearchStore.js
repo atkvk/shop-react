@@ -1,20 +1,20 @@
 "use strict";
 
-var EventEmitter = require('event').EventEmitter;
-var Dispatcher = require('flux').Dispatcher;
+var EventEmitter = require('events').EventEmitter;
+var Dispatcher = require('../dispatchers/shopDispatcher');
 var assign = require('object-assign');
 
 var CHANGE_EVENT = 'change';
 
 var actionTypes = require('../constants/actionTypes');
 
-const SEARCHMODEL = {
+const SEARCH_MODEL = {
     SIMPLE: 'SIMPLE',
     COMPLEX: 'COMPLEX'
 };
 
 var search = {
-    mode: SEARCHMODEL.SIMPLE,
+    mode: SEARCH_MODEL.SIMPLE,
     simple: {
         text: ''
     },
@@ -35,7 +35,7 @@ var search = {
     }
 };
 
-var CompanySearchStore = assign({}, EventEmitter, {
+var CompanySearchStore = assign({}, EventEmitter.prototype, {
     addChangeEventListener: function(callback){
       this.on(CHANGE_EVENT, callback);
     },
@@ -50,7 +50,7 @@ var CompanySearchStore = assign({}, EventEmitter, {
     }
 });
 
-Dispatcher.register(function(action){
+Dispatcher.register(function (action) {
     switch (action.actionType){
         case  actionTypes.SWITCH_SEARCH_MODE:
             // TODO
