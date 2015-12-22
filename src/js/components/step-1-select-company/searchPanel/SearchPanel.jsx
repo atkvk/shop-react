@@ -21,6 +21,7 @@ var Search = React.createClass({
         CompanySearchStore.removeChangeEventListener(this._onChange);
     },
     toggleSearchMode: function () {
+        console.log('toggle search mode clicked');
         var mode = this.state.search.mode;
         mode = mode === 'SIMPLE' ? 'COMPLEX' : 'SIMPLE';
         shopActions.switchSearchMode(mode);
@@ -29,12 +30,15 @@ var Search = React.createClass({
         return (
             <div>
                 <div onClick={this.toggleSearchMode}>Toggle search</div>
-                <SimpleSearch/>
-                <ComplexSearch />
+                <SimpleSearch enabled={this.state.search.mode === 'SIMPLE'}/>
+                <ComplexSearch enabled={this.state.search.mode === 'COMPLEX'}/>
             </div>
         );
     },
     _onChange: function () {
+        this.setState({
+            search: CompanySearchStore.getSearch()
+        });
     }
 });
 

@@ -34,6 +34,7 @@ var ShopActions = {
         });
     },
     switchSearchMode: function(mode){
+        console.log('switch to mode', mode);
         Dispatcher.dispatch({
             actionType: constants.SWITCH_SEARCH_MODE,
             mode: mode

@@ -53,7 +53,7 @@ var CompanySearchStore = assign({}, EventEmitter.prototype, {
 Dispatcher.register(function (action) {
     switch (action.actionType){
         case  actionTypes.SWITCH_SEARCH_MODE:
-            // TODO
+            search.mode = action.mode;
             CompanySearchStore.emitChange();
             break;
         case actionTypes.SEARCH:
