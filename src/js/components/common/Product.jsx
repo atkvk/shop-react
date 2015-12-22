@@ -4,18 +4,16 @@ var React = require('react');
 var shopActions = require('../../actions/shopActions');
 
 var Product = React.createClass({
-    removeProduct: function(){
+    removeProduct: function () {
         shopActions.removeProduct();
     },
     render: function () {
         return (
             <div className="row info-panel">
                 <div className="col-md-12">
-                    <div className="well-lg">
-                        <div><h3>{this.props.product.productnaam}</h3></div>
-                        <div>
-                            <button onClick={this.removeProduct}>Remove</button>
-                        </div>
+                    <div><h3>{this.props.product.productnaam}</h3></div>
+                    <div>
+                        <button onClick={this.removeProduct}>Remove</button>
                     </div>
                 </div>
             </div>

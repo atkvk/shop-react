@@ -12,16 +12,14 @@ var Company = React.createClass({
         return (
             <div className="row info-panel">
                 <div className="col-md-12">
-                    <div className="well-lg">
-                        <div>
-                            <h3>{this.props.company.handelsnaam}</h3>
-                        </div>
-                        <div>
-                            Kvknummer: <span>{this.props.company.dossiernummer}</span>
-                        </div>
-                        <div>
-                            <button onClick={this.removeCompany}>Remove</button>
-                        </div>
+                    <div>
+                        <h3>{this.props.company.handelsnaam}</h3>
+                    </div>
+                    <div>
+                        Kvknummer: <span>{this.props.company.dossiernummer}</span>
+                    </div>
+                    <div>
+                        <button onClick={this.removeCompany}>Remove</button>
                     </div>
                 </div>
             </div>

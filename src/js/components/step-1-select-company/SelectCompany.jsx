@@ -1,10 +1,10 @@
 "use strict";
 
+var React = require('react');
+
 var OrderFactory = require('../../models/OrderFactory');
 var dataService = require('../../dataService');
 
-var React = require('react');
-var ReactDOM = require('react-dom');
 var SearchPanel = require('./searchPanel/SearchPanel.jsx');
 var Company = require('./Company.jsx');
 var CompanySearchStore = require('../../stores/companySearchStore');
@@ -24,7 +24,7 @@ var SelectCompany = React.createClass({
     },
     render: function () {
         var companies = this.state.companies.map(function (company) {
-            var kvknummer = company.dossiernummer + company.subdossiernummer + company.vestigingsnummer;
+            var kvknummer = company.dossiernummer + company.handelsnaam;
             return <Company key={kvknummer} company={company}/>
         });
         return (
