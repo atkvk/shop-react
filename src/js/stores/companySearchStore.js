@@ -8,6 +8,8 @@ var CHANGE_EVENT = 'change';
 
 var actionTypes = require('../constants/actionTypes');
 
+var dataService = require('../dataService');
+
 const SEARCH_MODEL = {
     SIMPLE: 'SIMPLE',
     COMPLEX: 'COMPLEX'
@@ -35,29 +37,34 @@ var search = {
     }
 };
 
+var companies = [];
+
 var CompanySearchStore = assign({}, EventEmitter.prototype, {
-    addChangeEventListener: function(callback){
-      this.on(CHANGE_EVENT, callback);
+    addChangeEventListener: function (callback) {
+        this.on(CHANGE_EVENT, callback);
     },
-    removeChangeEventListener: function(callback){
-      this.removeListener(CHANGE_EVENT, callback)
+    removeChangeEventListener: function (callback) {
+        this.removeListener(CHANGE_EVENT, callback)
     },
-    emitChange: function(){
-      this.emit(CHANGE_EVENT);
+    emitChange: function () {
+        this.emit(CHANGE_EVENT);
     },
     getSearch: function () {
         return search;
+    },
+    getCompanies: function () {
+        return companies;
     }
 });
 
 Dispatcher.register(function (action) {
-    switch (action.actionType){
+    switch (action.actionType) {
         case  actionTypes.SWITCH_SEARCH_MODE:
             search.mode = action.mode;
             CompanySearchStore.emitChange();
             break;
-        case actionTypes.SEARCH:
-            // TODO
+        case actionTypes.SEARCH_COMPANIES:
+            companies = dataService.searchCompanies(action.searchParams);
             CompanySearchStore.emitChange()
     }
 });

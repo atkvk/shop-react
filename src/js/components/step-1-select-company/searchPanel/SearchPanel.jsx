@@ -30,7 +30,7 @@ var Search = React.createClass({
         return (
             <div>
                 <div onClick={this.toggleSearchMode}>Toggle search</div>
-                <SimpleSearch enabled={this.state.search.mode === 'SIMPLE'}/>
+                <SimpleSearch enabled={this.state.search.mode === 'SIMPLE'} searchText="xxx"/>
                 <ComplexSearch enabled={this.state.search.mode === 'COMPLEX'}/>
             </div>
         );

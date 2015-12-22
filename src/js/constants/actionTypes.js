@@ -9,7 +9,7 @@ module.exports = keyMirror(
         REMOVE_PRODUCT: null,
 
         SWITCH_SEARCH_MODE: null,
-        SEARCH: null,
+        SEARCH_COMPANIES: null,
 
         SELECT_PAYMENT: null
     }

@@ -6,7 +6,7 @@ var CompanySearchStore = require('../../../stores/companySearchStore');
 
 var ComplexSearch = React.createClass({
     render: function () {
-        var classes = classset({'is-hidden': this.props.enabled});
+        var classes = classset({'is-hidden': !this.props.enabled});
         return (
             <div className={classes}>
                 <h2>Complex search</h2>

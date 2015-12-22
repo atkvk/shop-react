@@ -33,11 +33,17 @@ var ShopActions = {
             payment: payment
         });
     },
-    switchSearchMode: function(mode){
+    switchSearchMode: function (mode) {
         console.log('switch to mode', mode);
         Dispatcher.dispatch({
             actionType: constants.SWITCH_SEARCH_MODE,
             mode: mode
+        })
+    },
+    searchCompanies: function (searchParams) {
+        Dispatcher.dispatch({
+            actionType: constants.SEARCH_COMPANIES,
+            searchParams: searchParams
         })
     }
 };
