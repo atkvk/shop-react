@@ -1,17 +1,18 @@
-.steps {
-  display: flex;
-  background-color: yellow;
+$back-ground: #CFCFCF;
 
-  div {
-    height: 50px;
-    flex-grow: 1;
+ul {
 
-    background-color: gray;
-    margin: 0 5px;
+  padding: 0;
 
-  }
+  li {
+    list-style: none;
+    background-color: $lightest-blue;
+    padding: 5px;
+    transition: transform .5s, background-color 1s;
 
-  .is-active {
-    background-color: green;
+    &:hover {
+      background-color: lighten($lightest-grey, 10%);
+      transform: scale(1.02, 1.02)
+    }
   }
 }

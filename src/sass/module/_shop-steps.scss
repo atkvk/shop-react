@@ -1,0 +1,29 @@
+
+.steps {
+  display: flex;
+  background-color: $background-grey;
+
+  font-size: 1.4em;
+
+  div {
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 50px;
+    flex-grow: 1;
+
+    background-color: $background-grey;
+    margin: 0 5px;
+
+    &:hover{
+      color: white;
+      background-color: $mid-dark-blue;
+      transition: background-color 1s ease, color 1.5s;
+    }
+  }
+
+  .is-active {
+    background-color: $mid-yellow;
+  }
+}
