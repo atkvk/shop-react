@@ -21,7 +21,7 @@ var OrderDetails = React.createClass({
     },
     render: function () {
         return (
-            <div>
+            <div className="flex-box">
                 {this.renderCompany()}
                 {this.renderProduct()}
             </div>

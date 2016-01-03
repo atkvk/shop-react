@@ -2,52 +2,9 @@
  	#MEDIA QUERY BREAKPOINTS
 \*------------------------------------*/
 
-/**
- * Extra small screen / phone
- */
-$screen-extrasmall: 321px !default;
-$screen-extrasmall-min: $screen-extrasmall !default;
-$screen-smallphone: $screen-extrasmall-min !default;
-
-/**
- * Small screen / phone
- */
-$screen-small: 481px !default;
-$screen-small-min: $screen-small !default;
-$screen-phone: $screen-small-min !default;
-
-/**
- * Small screen / tablet
- */
-$screen-medium: 641px !default;
-$screen-medium-min: $screen-medium !default;
-$screen-tablet: $screen-medium-min !default;
-
-/*
- * Medium screen / desktop
- */
-$screen-large: 721px !default;
-$screen-large-min: $screen-large !default;
-$screen-desktop: $screen-large-min !default;
-
-/*
- * Large screen / wide desktop
- */
-$screen-extralarge: 961px !default;
-$screen-extralarge-min: $screen-extralarge !default;
-$screen-extralarge-desktop: $screen-extralarge-min !default;
-
-/*
- * So media queries don't overlap when required, provide a maximum
- */
-$screen-small-max: ($screen-medium-min - 1) !default;
-$screen-medium-max: ($screen-large-min - 1) !default;
-$screen-large-max: ($screen-extralarge-min - 1) !default;
-
-/**
- * Module breakpoints
- * Mixin for easy to use breakpoints using settings above
- */
+$screen-l: 960px;
+$screen-m: 721px;
+$screen-s: 321px;
 
 @mixin breakpoint($point) {
   @if $point == extrasmall {

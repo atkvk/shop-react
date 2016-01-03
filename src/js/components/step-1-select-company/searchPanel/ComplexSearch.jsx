@@ -9,7 +9,6 @@ var ComplexSearch = React.createClass({
         var classes = classset({'is-hidden': !this.props.enabled});
         return (
             <div className={classes}>
-                <h2>Complex search</h2>
                 <form action="" method="post">
                     <fieldset className="details">
                         <input type="text" id="handelsnaam" placeholder="Handelsnaam" tabIndex="4" data-minlength="2"/>

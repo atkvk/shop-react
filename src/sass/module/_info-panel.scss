@@ -1,6 +1,22 @@
-.info-panel{
-  margin-top: 5px;
-  margin-bottom: 5px;
-  padding: 15px;
+//.info-panel {
+//  margin-top: 5px;
+//  margin-bottom: 5px;
+//  padding: 15px;
+//  background-color: $background-grey;
+//}
+
+.search-panel {
+  margin: 5px 0;
   background-color: $background-grey;
+  transition: all 1s;
+
+  .search-panel-header {
+    background-color: $lightest-grey;
+    padding: 1rem;
+    cursor: pointer;
+  }
+
+  .search-panel-body {
+    padding: 10px 5px;
+  }
 }

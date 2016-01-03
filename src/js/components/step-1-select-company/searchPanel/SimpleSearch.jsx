@@ -27,7 +27,6 @@ var SimpleSearch = React.createClass({
         var classes = classset({'is-hidden': !this.props.enabled});
         return (
             <div className={classes}>
-                <h2>Simple search</h2>
                 <input type="text"
                        ref="searchText"
                        value={this.state.searchText}

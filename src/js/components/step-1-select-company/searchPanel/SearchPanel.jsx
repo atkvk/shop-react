@@ -27,11 +27,15 @@ var Search = React.createClass({
         shopActions.switchSearchMode(mode);
     },
     render: function () {
+        var mode = this.state.search.mode;
+        var toggleText = mode === 'SIMPLE' ? 'To complex search' : 'To simple search';
         return (
-            <div>
-                <div onClick={this.toggleSearchMode}>Toggle search</div>
-                <SimpleSearch enabled={this.state.search.mode === 'SIMPLE'} searchText="xxx"/>
-                <ComplexSearch enabled={this.state.search.mode === 'COMPLEX'}/>
+            <div className="search-panel">
+                <div className="search-panel-header" onClick={this.toggleSearchMode}>{toggleText}</div>
+                <div className="search-panel-body">
+                    <SimpleSearch enabled={this.state.search.mode === 'SIMPLE'} searchText="xxx"/>
+                    <ComplexSearch enabled={this.state.search.mode === 'COMPLEX'}/>
+                </div>
             </div>
         );
     },

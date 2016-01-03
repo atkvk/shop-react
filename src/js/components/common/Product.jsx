@@ -9,12 +9,10 @@ var Product = React.createClass({
     },
     render: function () {
         return (
-            <div className="row info-panel">
-                <div className="col-md-12">
-                    <div><h3>{this.props.product.productnaam}</h3></div>
-                    <div>
-                        <button onClick={this.removeProduct}>Remove</button>
-                    </div>
+            <div className="item">
+                <div><h3>{this.props.product.productnaam}</h3></div>
+                <div>
+                    <button onClick={this.removeProduct}>Remove</button>
                 </div>
             </div>
         );
