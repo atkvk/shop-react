@@ -9,8 +9,8 @@ var babelify = require('babelify');
 var browserSync = require('browser-sync').create();
 var nodemon = require('gulp-nodemon');
 
-gulp.task('default', ['copy', 'styles', 'scripts', 'watch', 'browser-sync']);
-gulp.task('production', ['copy', 'styles', 'scripts']);
+gulp.task('default', ['copy', 'styles', 'scripts', 'images', 'watch', 'browser-sync']);
+gulp.task('production', ['copy', 'styles', 'scripts', 'images']);
 
 gulp.task('scripts', function () {
     return browserify(['./src/js/main.js'])
@@ -45,6 +45,11 @@ gulp.task('styles', function () {
             cascade: false
         }))
         .pipe(gulp.dest('./dist/css/'));
+});
+
+gulp.task('images', function () {
+    gulp.src('./src/images/**/*.svg')
+        .pipe(gulp.dest('./dist/images/'));
 });
 
 gulp.task('copy', function () {

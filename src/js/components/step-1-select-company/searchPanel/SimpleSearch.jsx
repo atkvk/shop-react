@@ -1,6 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var classset = require('react-classset');
+var classNames = require('classnames');
 
 var shopActions = require('../../../actions/shopActions');
 var CompanySearchStore = require('../../../stores/companySearchStore');
@@ -24,7 +24,10 @@ var SimpleSearch = React.createClass({
         this.setState(state);
     },
     render: function () {
-        var classes = classset({'is-hidden': !this.props.enabled});
+        var classes = classNames(
+            {'is-hidden': !this.props.enabled},
+            {'slide-in': true}
+        );
         return (
             <div className={classes}>
                 <input type="text"

@@ -8,7 +8,6 @@
 .search-panel {
   margin: 5px 0;
   background-color: $background-grey;
-  transition: all 1s;
 
   .search-panel-header {
     background-color: $lightest-grey;
@@ -18,5 +17,18 @@
 
   .search-panel-body {
     padding: 10px 5px;
+  }
+}
+
+.slide-in{
+  animation: slide-in 5s forwards;
+  @keyframes slide-in {
+    from {
+      max-height: 0;
+    }
+
+    to {
+      max-height: 1000px;
+    }
   }
 }

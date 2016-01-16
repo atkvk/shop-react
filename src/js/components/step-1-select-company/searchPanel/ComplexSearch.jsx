@@ -1,12 +1,15 @@
 var React = require('react');
-var classset = require('react-classset');
+var classNames = require('classNames');
 
 var shopActions = require('../../../actions/shopActions');
 var CompanySearchStore = require('../../../stores/companySearchStore');
 
 var ComplexSearch = React.createClass({
     render: function () {
-        var classes = classset({'is-hidden': !this.props.enabled});
+        var classes = classNames(
+            {'is-hidden': !this.props.enabled},
+            ['slide-in']
+        );
         return (
             <div className={classes}>
                 <form action="" method="post">
